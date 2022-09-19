@@ -1,4 +1,4 @@
-name: Laravel Lambda Container
+name: Laravel Lambda Container - Production
 
 on:
   push:

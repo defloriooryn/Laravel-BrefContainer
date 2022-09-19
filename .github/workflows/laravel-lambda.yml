@@ -2,9 +2,9 @@ name: Laravel Lambda Container
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ development, staging, production]
   pull_request:
-    branches: [ "master" ]
+    branches: [ development, staging, production]
 
 jobs:
 

@@ -2,15 +2,13 @@ name: Laravel Lambda Container using bref & serverless
 
 on:
   push:
-    branches: [ master, staging, development]
-  pull_request:
-    branches: [ master, staging, development]
+    branches: [ "master" ]
 
 jobs:
 
-  Development:
+  Deploy:
     runs-on: ubuntu-latest
-    environment: 
+    environment: production, staging, development
     steps:
       - name: Checkout
         uses: actions/checkout@v3

@@ -48,7 +48,7 @@ jobs:
       - name: Deploy using Serverless Framework
         run: serverless deploy
 
-  Staging:
+  Deploy-Staging:
     environment: staging
     if: github.event.ref == 'refs/heads/staging'
     runs-on: ubuntu-latest
@@ -80,7 +80,7 @@ jobs:
       - name: Deploy using Serverless Framework
         run: serverless deploy
 
-  Production:
+  Deploy-Production:
     runs-on: ubuntu-latest
     environment: production
     if: github.event.ref == 'refs/heads/master'

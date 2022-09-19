@@ -1,4 +1,4 @@
-name: Laravel Lambda Container using bref & serverless 
+name: Laravel Lambda Container 
 
 on:
   push:
@@ -6,9 +6,11 @@ on:
 
 jobs:
 
-  Deploy:
+  Deploy-Development:
+    environment: development
+    if: github.event.ref == 'refs/heads/development'
     runs-on: ubuntu-latest
-    environment: production, staging, development
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -38,8 +40,9 @@ jobs:
         run: serverless deploy
 
   Staging:
-    runs-on: ubuntu-latest
     environment: staging
+    if: github.event.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -70,7 +73,8 @@ jobs:
   
   Production:
     runs-on: ubuntu-latest
-    environment: production 
+    environment: production
+    if: github.event.ref == 'refs/heads/master'
     steps:
       - name: Checkout
         uses: actions/checkout@v3

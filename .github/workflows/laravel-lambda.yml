@@ -33,9 +33,6 @@ jobs:
       - name: Install depedencies
         uses: php-actions/composer@v6
       
-      - name: PHP generate
-        run: php artisan key:generate
-      
       - name: PHP cache clear
         run: php artisan cache:clear
         

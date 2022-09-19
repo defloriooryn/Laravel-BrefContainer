@@ -34,7 +34,7 @@ jobs:
         uses: php-actions/composer@v6
       
       - name: PHP artisan
-        run: php artisan key:generate && php artisan cache:clear && php artisan config cache
+        run: php artisan key:generate && php artisan cache:clear
         
       - name: Deploy using Serverless Framework
         run: serverless deploy

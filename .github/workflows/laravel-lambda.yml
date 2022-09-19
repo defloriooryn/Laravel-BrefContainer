@@ -1,10 +1,10 @@
-name: Laravel Lambda Container
+name: Laravel Lambda Container using bref & serverless 
 
 on:
   push:
-    branches: [ development, staging, production]
+    branches: [ master, staging, development]
   pull_request:
-    branches: [ development, staging, production]
+    branches: [ master, staging, development]
 
 jobs:
 

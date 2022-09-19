@@ -70,9 +70,9 @@ jobs:
       - name: Deploy using Serverless Framework
         run: serverless deploy
   
-    Production:
+  Production:
     runs-on: ubuntu-latest
-    environment: production
+    environment: production 
     steps:
       - name: Checkout
         uses: actions/checkout@v3

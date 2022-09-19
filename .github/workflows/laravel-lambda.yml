@@ -1,4 +1,4 @@
-name: Laravel Lambda 
+name: Laravel Lambda Container
 
 on:
   push:
@@ -24,9 +24,6 @@ jobs:
 
       - name: Composer
         uses: php-actions/composer@v6
-      
-      - name: Permission Composer
-        uses: sudo chown -R $USER ~/.composer/
     
       - name: Node 14
         uses: actions/setup-node@v3
@@ -35,8 +32,6 @@ jobs:
       
       - name: Install Serverless Framework
         run: npm install -g serverless
-      
-      - name: composer install
-        run: composer install
+        
       - name: Deploy using Serverless Framework
         run: serverless deploy

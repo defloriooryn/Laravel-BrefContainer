@@ -33,8 +33,8 @@ jobs:
       - name: Install depedencies
         uses: php-actions/composer@v6
       
-      - name: PHP cache clear
-        run: php artisan cache:clear
+      - name: PHP artisan
+        run: php artisan key:generate && php artisan cache:clear && php artisan config cache
         
       - name: Deploy using Serverless Framework
         run: serverless deploy

@@ -15,3 +15,4 @@ functions:
             name: laravel-image
         events:
             -   httpApi: '*'
+        logRetentionInDays: 7
